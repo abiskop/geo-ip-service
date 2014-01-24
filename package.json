@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/abiskop/geo-ip-service",
   "dependencies": {
-    "restify": "~2.6.1"
+    "restify": "~2.6.1",
+    "superagent": "~0.16.0",
+    "bunyan": "~0.22.1"
   },
   "devDependencies": {
     "mocha": "~1.17.1"
