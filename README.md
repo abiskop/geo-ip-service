@@ -30,6 +30,25 @@ Returns
 
 
 ###Running Tests
+Requirements:
+- a VM provider, preferrably VirtualBox
+  -- tested with VirtualBox v4.1, Guest Additions v4.2.0
+- vagrant 
+- vagrant-omnibus
+- librarian-chef
+
+Install cookbooks and start the Vagrant box:
+```
+(cd chef && librarian-chef install)
+(cd vagrant && vagrant destroy -f && vagrant up)
+```
+
+Run tests:
+```
+(cd vagrant && vagrant ssh -c "cd /media/geoip && npm test")
+```
+
+*Or*, if you do not want to run the Vagrant box, run tests on your machine instead.
 Go to `cd node`, run the service locally via `node lib/index.js | node_modules/.bin/bunyan` and run tests via `npm test`.
 
 

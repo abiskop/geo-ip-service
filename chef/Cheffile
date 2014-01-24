@@ -1,0 +1,4 @@
+site "http://community.opscode.com/api/v1"
+
+cookbook "geo-ip-service",
+  :path => "./local-cookbooks/geo-ip-service"

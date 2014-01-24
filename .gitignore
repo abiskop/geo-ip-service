@@ -11,5 +11,8 @@ pids
 logs
 results
 
+chef/tmp
+chef/cookbooks
+.vagrant
 npm-debug.log
 node_modules
