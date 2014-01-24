@@ -1,0 +1,19 @@
+{
+  "name": "geo-ip-service",
+  "version": "0.0.0",
+  "description": "Simple service that performs a geo-lookup on IP addresses.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha -t 60000 -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/abiskop/geo-ip-service.git"
+  },
+  "author": "Alexander Biskop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abiskop/geo-ip-service/issues"
+  },
+  "homepage": "https://github.com/abiskop/geo-ip-service"
+}
