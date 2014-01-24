@@ -1,0 +1,17 @@
+# This file is managed by Chef for <%= node['fqdn'] %>
+# Do NOT modify this file directly.
+
+description "geoip"
+
+start on virtual-filesystems
+stop on runlevel [06]
+
+respawn
+limit nofile 65550 65550
+
+setuid geoip
+setgid geoip
+
+script
+exec node <%= @installdir %>/node/lib/index.js >> <%= @logdir %>/geoip_bunyan.log
+end script

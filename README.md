@@ -30,7 +30,7 @@ Returns
 
 
 ###Running Tests
-Run the service locally via `node lib/index.js | node_modules/.bin/bunyan` and run tests via `npm test`.
+Go to `cd node`, run the service locally via `node lib/index.js | node_modules/.bin/bunyan` and run tests via `npm test`.
 
 
 ###License
