@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/abiskop/geo-ip-service/issues"
   },
-  "homepage": "https://github.com/abiskop/geo-ip-service"
+  "homepage": "https://github.com/abiskop/geo-ip-service",
+  "dependencies": {
+    "restify": "~2.6.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1"
+  }
 }
