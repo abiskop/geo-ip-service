@@ -37,10 +37,9 @@ Requirements:
 - vagrant-omnibus
 - librarian-chef
 
-Init submodule, install npm/node modules, install cookbooks:
+Make/install cookbooks:
 ```
-git submodule update --init
-(cd chef/geo-ip-service/files/default/geo-ip-service && npm install)
+bash make-cookbook.sh
 (cd vagrant && librarian-chef install)
 ```
 Start the Vagrant box:
