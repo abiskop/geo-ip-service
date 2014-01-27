@@ -13,5 +13,5 @@ setuid geoip
 setgid geoip
 
 script
-exec node <%= @installdir %>/node/lib/index.js >> <%= @logdir %>/geoip_bunyan.log
+exec node <%= @installdir %>/lib/index.js >> <%= @logdir %>/geoip_bunyan.log
 end script

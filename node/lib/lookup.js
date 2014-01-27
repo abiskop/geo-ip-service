@@ -11,7 +11,10 @@ function create(config) {
   }
 
   function lookup(ip, done) {
-    var options = { timeout: 10000 }
+    var options = {
+      timeout: 10000,
+      maxBuffer: 1024*1024
+    }
     var cliCommand = config.command
     exec(cliCommand + ' ' + ip, options, function(err, stdout, stderr) {
       if (err) return done(new Error(err + ' ' + stdout + ' ' + stderr))

@@ -1,7 +1,7 @@
 geo-ip-service
 ==============
 
-A simple service that performs a geo-lookup on IP addresses using the [geoiplookup](http://manpages.ubuntu.com/manpages/hardy/man1/geoiplookup.1.html) command line tool and the free [GeoLite Land Database](http://dev.maxmind.com/geoip/legacy/geolite/).
+A simple node.js service that performs a geo-lookup on IP addresses using the [geoiplookup](http://manpages.ubuntu.com/manpages/hardy/man1/geoiplookup.1.html) command line tool and the free [GeoLite Country Database](http://dev.maxmind.com/geoip/legacy/geolite/).
 
 ##Documentation
 
@@ -37,8 +37,10 @@ Requirements:
 - vagrant-omnibus
 - librarian-chef
 
-Install cookbooks and start the Vagrant box:
+Init submodule, install npm/node modules, install cookbooks and start the Vagrant box:
 ```
+git submodule update --init
+(cd chef/local-cookbooks/geo-ip-service/files/default/geo-ip-service/node && npm install)
 (cd chef && librarian-chef install)
 (cd vagrant && vagrant destroy -f && vagrant up)
 ```
@@ -47,9 +49,6 @@ Run tests:
 ```
 (cd vagrant && vagrant ssh -c "cd /media/geoip && npm test")
 ```
-
-*Or*, if you do not want to run the Vagrant box, run tests on your machine instead.
-Go to `cd node`, run the service locally via `node lib/index.js | node_modules/.bin/bunyan` and run tests via `npm test`.
 
 
 ###License

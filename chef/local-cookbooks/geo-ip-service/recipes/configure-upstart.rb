@@ -7,9 +7,21 @@ template "/etc/init/geoip.conf" do
     :installdir => node["geo-ip-service"]["install-dir"],
     :logdir => node["geo-ip-service"]["log-dir"]
   })
+end
+
+# service 'geoip' do
+#   provider Chef::Provider::Service::Upstart
+#   supports :start => true, :restart => true, :stop => true, :status => true
+#   action :nothing
+# end
+
+service 'geoip' do
+  provider Chef::Provider::Service::Upstart
+  supports :start => true, :restart => true, :stop => true, :status => true
+  action [:enable, :start]
   notifies :restart, "service[geoip]", :delayed
 end
 
-service "geoip" do
-  action [:enable, :start]
-end
+# service "geoip" do
+#   action [:enable]
+# end
