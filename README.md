@@ -37,17 +37,20 @@ Requirements:
 - vagrant-omnibus
 - librarian-chef
 
-Init submodule, install npm/node modules, install cookbooks and start the Vagrant box:
+Init submodule, install npm/node modules, install cookbooks:
 ```
 git submodule update --init
 (cd chef/local-cookbooks/geo-ip-service/files/default/geo-ip-service/node && npm install)
 (cd chef && librarian-chef install)
+```
+Start the Vagrant box:
+```
 (cd vagrant && vagrant destroy -f && vagrant up)
 ```
 
-Run tests:
+Run tests against the Vagrant box:
 ```
-(cd vagrant && vagrant ssh -c "cd /media/geoip && npm test")
+(cd node && npm test)
 ```
 
 

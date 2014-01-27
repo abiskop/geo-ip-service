@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define :geoip do |localConfig|
     localConfig.vm.network :private_network, ip: "192.168.50.70"
-    localConfig.vm.network :forwarded_port, host: 17000, guest: 7000
+    localConfig.vm.network :forwarded_port, host: 7000, guest: 7000
     localConfig.vm.synced_folder "../", "/media/geoip"
     localConfig.vm.provision :shell,
       :inline => "CHEFENV=vagrant bash /media/geoip/chef/run-chef-solo.sh"
