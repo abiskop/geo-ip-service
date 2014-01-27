@@ -16,4 +16,4 @@ vagrant/tmp
 vagrant/cookbooks
 .vagrant
 npm-debug.log
-node_modules
+!node_modules
