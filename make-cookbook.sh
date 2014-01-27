@@ -1,7 +1,7 @@
 set -e
 set -x
 
-TARGET_DIR="chef/geo-ip-service/files/default"
+TARGET_DIR="chef/geo-ip-service/files/default/geo-ip-service"
 cp -r ./conf $TARGET_DIR
 cp -r ./lib $TARGET_DIR
 cp -r ./node_modules $TARGET_DIR
