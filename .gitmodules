@@ -1,3 +1,0 @@
-[submodule "chef/local-cookbooks/geo-ip-service/files/default/geo-ip-service"]
-	path = chef/local-cookbooks/geo-ip-service/files/default/geo-ip-service
-	url = git@github.com:abiskop/geo-ip-service.git
