@@ -1,0 +1,3 @@
+[submodule "chef/geo-ip-service/files/default/geo-ip-service"]
+	path = chef/geo-ip-service/files/default/geo-ip-service
+	url = git@github.com:abiskop/geo-ip-service.git

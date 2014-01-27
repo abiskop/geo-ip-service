@@ -11,8 +11,9 @@ pids
 logs
 results
 
-chef/tmp
-chef/cookbooks
+Cheffile.lock
+vagrant/tmp
+vagrant/cookbooks
 .vagrant
 npm-debug.log
 node_modules

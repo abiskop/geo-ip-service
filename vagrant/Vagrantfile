@@ -13,7 +13,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     localConfig.vm.network :private_network, ip: "192.168.50.70"
     localConfig.vm.network :forwarded_port, host: 7000, guest: 7000
     localConfig.vm.synced_folder "../", "/media/geoip"
-    localConfig.vm.provision :shell,
-      :inline => "CHEFENV=vagrant bash /media/geoip/chef/run-chef-solo.sh"
+    #localConfig.vm.provision :shell,
+    #  :inline => "CHEFENV=vagrant bash /media/geoip/vagrant/run-chef-solo.sh"
+    localConfig.vm.provision :chef_solo do |chef|
+      chef.cookbooks_path = "./cookbooks"
+      chef.add_recipe "apt"
+      chef.add_recipe "geo-ip-service"
+    end
   end
 end
