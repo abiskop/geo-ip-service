@@ -26,7 +26,7 @@ end
 remote_directory "copy_to_install_dir" do
   recursive true
   path node["geo-ip-service"]["install-dir"]
-  source "geo-ip-service/node"
+  source "geo-ip-service"
   files_owner "root"
   files_group "root"
   files_mode 00775
