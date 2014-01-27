@@ -13,8 +13,9 @@ user "geoip" do
 end
 
 directory node["geo-ip-service"]["install-dir"] do
-  owner "geoip"
-  group "geoip"
+  owner "root"
+  group "root"
+  mode 00755
 end
 
 directory node["geo-ip-service"]["log-dir"] do
@@ -23,6 +24,10 @@ directory node["geo-ip-service"]["log-dir"] do
 end
 
 remote_directory "copy_to_install_dir" do
+  recursive true
   path node["geo-ip-service"]["install-dir"]
   source "geo-ip-service/node"
+  files_owner "root"
+  files_group "root"
+  files_mode 00755
 end
