@@ -40,7 +40,7 @@ Requirements:
 Init submodule, install npm/node modules, install cookbooks:
 ```
 git submodule update --init
-(cd chef/geo-ip-service/files/default/geo-ip-service/node && npm install)
+(cd chef/geo-ip-service/files/default/geo-ip-service && npm install)
 (cd vagrant && librarian-chef install)
 ```
 Start the Vagrant box:
@@ -50,7 +50,7 @@ Start the Vagrant box:
 
 Run tests against the Vagrant box:
 ```
-(cd node && npm test)
+npm test
 ```
 
 
