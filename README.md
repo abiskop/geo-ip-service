@@ -52,6 +52,8 @@ Run tests against the Vagrant box:
 npm test
 ```
 
+When making changes to the source code, run `bash make-cookbook.sh && (cd vagrant && vagrant provision)` in order to re-provision the box before re-running tests via `npm test`.
+
 
 ###License
 This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com.
